@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doe com PIX - Faça a Diferença</title>
+    <link rel="stylesheet" href="assets/CSS/please.css">
+    <link rel="stylesheet" href="assets/CSS/componentes.css">
+    <link rel="stylesheet" href="assets/CSS/footer.css">
+    <link rel="stylesheet" href="assets/CSS/cabecalho.css">
+    <link rel="shortcut icon" type="imagex/png" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    <header>
+        <nav>
+            <ul class='nav-bar'>
+                <li class='logo'><a href='index.html'><h1>SOCIAL WEB</h1></a></li>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">SOBRE NÓS</a></li>
+                    <li class="nav-item"><a href="cursos.html" class="nav-link">CURSOS</a></li> 
+                    <li class="nav-item"><a href="please.html" class="nav-link">AJUDE-NOS</a></li>  
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+        </header>   
+
+    <main>
+        <div class="conteudo">
+            <h1>Contribua com PIX</h1>
+            <p>Faça sua doação de forma rápida e segura usando nossa chave PIX ou escaneando o QR Code.</p>
+        </div> 
+        <div class="pix-container">
+            <h2>Chave PIX:</h2>
+            <input type="text" value="20169385795" readonly>
+            
+            <h2>Ou escaneie o QR Code abaixo:</h2>
+            <img src="assets/img/Captura de tela 2024-10-15 203524.png" alt="QR Code para doação via PIX" style="width: 100%; max-width: 300px; border-radius: 10px;"> <!-- Centraliza a imagem -->
+            
+            <button onclick="copiarChave()">Copiar Chave PIX</button>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h3>SITE FEITO POR:</h3>
+                <p>SiteZ</p>
+    
+                <div id="footer_social_media">
+                    <a target="_blank" href="https://www.instagram.com/sitez_027?igsh=dWV3Y2puN3RuaWd5" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <ul class="footer-list">
+                <li>
+                    <h3>Páginas</h3>
+                </li>
+                <li>
+                    <a href="index.html" class="footer-link">HOME</a>
+                </li>
+                <li>
+                    <a href="cursos.html" class="footer-link">CURSOS</a>
+                </li>
+                <li>
+                    <a href="please.html" class="footer-link">AJUDE-NOS</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div id="footer_copyright">
+            &#169
+            2024 Todos Direitos Reservados
+        </div>
+    </footer>  
+    <script>
+        function copiarChave() {
+            const chavePIX = document.querySelector('input[type="text"]');
+            chavePIX.select();
+            chavePIX.setSelectionRange(0, 99999); 
+            document.execCommand("copy");
+            alert("Chave PIX copiada para a área de transferência!");
+        }
+    </script>
+
+</body>
+</html>
